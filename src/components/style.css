@@ -4,6 +4,7 @@
 .productContainer {
   display: flex;
   width: 78%;
+  min-width: 50%;
   padding: 20px;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -21,14 +22,18 @@
   padding: 20px;
   display: flex;
   flex-direction: column;
-  width: 20%;
-  margin: 10px;
+  min-width: 180px;
+  margin-left: 10px;
+  margin-top: 25px;
   height: 86vh;
 }
 
 .product {
-  width: 30%;
-  margin: 10px;
+  /* width: 30%; */
+  margin: .8vw;
+  /* min-width: 50%; */
+  width: 250px;
+  /* margin-bottom: 20px; */
 }
 
 .cartItem {
@@ -55,4 +60,13 @@
 
 .summary {
   width: 30%;
+}
+
+@media (max-width: 500px){
+  .search{
+    visibility: hidden;
+  }
+  .headerContainer{
+    padding: 0px 15px;
+  }
 }

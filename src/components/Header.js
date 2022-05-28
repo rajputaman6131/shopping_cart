@@ -22,13 +22,12 @@ const Header = () => {
   } = CartState();
   return (
     <Navbar bg="dark" variant="dark" style={{ height: 80 }}>
-      <Container>
+      <Container className="headerContainer">
         <Navbar.Brand>
           <Link to="/">Shopping Cart</Link>
         </Navbar.Brand>
-        <Navbar.Text className="search">
+        <Navbar.Text style={{ width: "50%" }} className="search">
           <FormControl
-            style={{ width: 500 }}
             placeholder="Search a product"
             className="m-auto"
             onChange={(e) =>
