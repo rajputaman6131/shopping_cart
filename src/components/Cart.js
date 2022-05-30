@@ -27,14 +27,17 @@ const Cart = () => {
                 <Col md={2}>
                   <Image src={prod.image} alt={prod.name} fluid rounded />
                 </Col>
-                <Col md={2}>
+                <Col className="cartCol" md={2}>
                   <span>{prod.name}</span>
                 </Col>
-                <Col md={2}> {prod.price}</Col>
-                <Col md={2}>
+                <Col className="cartCol" md={2}>
+                  {" "}
+                  {prod.price}
+                </Col>
+                <Col className="cartCol" md={2}>
                   <Rating rating={prod.ratings} />
                 </Col>
-                <Col md={2}>
+                <Col className="cartCol" md={2}>
                   <Form.Control
                     as="select"
                     value={prod.qty}

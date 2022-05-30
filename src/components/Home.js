@@ -1,6 +1,7 @@
 import React from "react";
 import { CartState } from "../context/context";
 import Filter from "./Filter";
+import NavDown from "./NavDown";
 import ProductCard from "./ProductCard";
 import "./style.css";
 
@@ -43,12 +44,17 @@ const Home = () => {
   };
 
   return (
-    <div className="home">
-      <Filter />
-      <div className="productContainer">
-        {transformProduct().map((product, index) => (
-          <ProductCard prod={product} key={index} />
-        ))}
+    <div>
+      <NavDown />
+      <div className="home">
+        <div id="filters">
+          <Filter />
+        </div>
+        <div className="productContainer">
+          {transformProduct().map((product, index) => (
+            <ProductCard prod={product} key={index} />
+          ))}
+        </div>
       </div>
     </div>
   );
